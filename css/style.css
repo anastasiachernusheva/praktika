@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.zag{
+    color: #25139b;
+    text-align: center;
+    font-size: 38px;
+}
+.pr{
+    margin-top: 15px;
+    text-align: justify;
+}
+.zag1{
+    color: #342a78;
+    text-align: center;
+    font-size: 30px;
+}
+footer{
+    background-color: black;
+    height: auto;
+}
