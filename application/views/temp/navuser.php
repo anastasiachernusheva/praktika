@@ -17,7 +17,7 @@
                     <a class="nav-link active" aria-current="page" href="applic/lichcab">Личный кабинет</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="applic/add_applic">Форма заявки</a>
+                    <a class="nav-link active" aria-current="page" href="applic/f_applic">Форма заявки</a>
                   </li>
                   </li>
                 </ul>

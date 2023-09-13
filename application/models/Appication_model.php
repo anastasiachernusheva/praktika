@@ -11,9 +11,9 @@ class Appication_model extends CI_Model{
         $result = $this->db->query($sql,array($id_user));
         return $result->result_array(); 
     }
-    public function ins_applic(){
-        $sql =' select zayavki.name, discription, status,date_start, category.name_category from zayavki, category where id_user=? and zayavki.id_category=category.id_category  ';
-        $result = $this->db->query($sql,array($id_user));
-        return $result->result_array(); 
+    public function ins_applic($id_user, $name, $discription,$name_category, $photo_d){
+        $sql =' INSERT INTO zayavki(date_start, name, discription,photo_d,id_user,id_category,status) VALUES(CURRENT_DATE(),?,?,?,?,?,"Новая")';
+        $result = $this->db->query($sql,array($name,$discription,$photo_d,$id_user, $name_category));
+        return $this->db->insert_id(); 
     }
 }

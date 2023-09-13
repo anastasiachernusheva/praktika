@@ -2,11 +2,11 @@
 class User_model extends CI_Model{
  
     public function ins_user($fio,$email, $login, $password ){
-        $sql = 	'CALL ins_user(?,?,?,?)'; 
+        $sql = 	'INSERT INTO users (fio, email, login, password ) VALUES(?,?,?,?)'; 
         $this->db->query($sql, array($fio, $email, $login, $password));
     }
     public function avtoriz($login,$password){
-        $sql = 'CALL avtoriz(?,?)';
+        $sql = 'SELECT * FROM users WHERE login = ? AND password = ?';
         $result = $this->db->query($sql, array($login,$password));
       return $result->row_array();    
     }

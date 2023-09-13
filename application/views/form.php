@@ -5,7 +5,7 @@
     <div class="applic">
     <h2>Оставьте заявку </h2>
         <div class="card">
-<form method="POST" action="main/add_applic" role="form" class="form-inline">
+<form method="POST" action="/applic/add_applic" role="form" class="form-inline" enctype="multipart/form-data">
         
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Введите название<font color="red">*</font></label>
@@ -29,10 +29,10 @@
         </div>
         <div id="mass"></div>        
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Добавьте фото<font color="red">*</font></label>
+            <label for="photo_d" class="form-label">Добавьте фото<font color="red">*</font></label>
             <div class="col-sm-10">
 <input type="hidden" name="MAX_FILE_SIZE" value="300000000" />
-<input type="file" class="form-control" id="userfile" name = 'userfile' >  
+<input type="file" class="form-control" id="photo_d" name = 'photo_d' accept="img/*" required>  
 </div>
         </div>
 
