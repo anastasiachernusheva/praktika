@@ -28,7 +28,10 @@
       </div>
       <div class="col-lg-2">
         <div class="vxod">
-          <button type="button" class="btn btn-outline-primary">Войти</button>
+
+  <button type="button" class="btn btn-outline-primary">
+
+        <a class="nav-link login-button"href="main/avtorizaciya">Войти</a></button>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
                 <h1 style="text-align: center;">Авторизация</h1>
                 <h6 style="text-align:center;">Войдите в свой аккаунт</h6>
                     <h6 style="text-align:center;">Добро пожаловать! Если вы не зарегистрированы, пройдите <a href="main/registr">регистрацию</a> на сайте.</h6>
-<form method="POST"action="main/avtoriz"   role="form" class="form-inline" style="border: 1px solid gray;
+<form method="POST"action="main/avtorizaciya"   role="form" class="form-inline" style="border: 1px solid gray;
     padding: 10px;">  
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Логин <font color="red">*</font></label>
