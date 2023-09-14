@@ -42,13 +42,23 @@ class Applic extends CI_Controller{
                 $this->load->model('appication_model');
                 $this->appication_model->delete_applic($id_zayavki);  
                 redirect('applic/lichcab');  
-            }}
+            }
+        }
             
     public function admin(){
         $this->load->view('temp/header.php');
         $this->load->view('temp/navadmin.php');
-        
+        $this->load->model('appication_model');
+        $data['applic'] = $this->appication_model->select_applic(); 
         $this->load->view('view_admin.php',$data);
         $this->load->view('temp/footer.php');
+            }
+            
+            public function status(){
+                $id_zayavki = $this->uri->segment(3);
+                $status = $this->uri->segment(4);
+                $this->load->model('appication_model');
+                $this->appication_model->update_status($id_zayavki,$status);
+                redirect('applic/admin');
             }
         }

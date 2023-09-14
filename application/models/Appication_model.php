@@ -21,4 +21,13 @@ class Appication_model extends CI_Model{
         $this->db->query($sql,array($id_zayavki));
      
     }
+    public function select_applic(){
+        $sql = 'select users.fio, zayavki.id_zayavki, name, discription, status,date_start,date_end, category.name_category from users, zayavki,category where users.id_user=zayavki.id_user and zayavki.id_category=category.id_category ';
+        $result = $this->db->query($sql);
+        return $result->result_array(); 
+    }
+   public function update_status($id_zayavki){
+    $sql = 'update zayavki set status = "Принято" where id_zayavki=(?) ';
+    $this->db->query($sql,$id_zayavki);
+}
 }
