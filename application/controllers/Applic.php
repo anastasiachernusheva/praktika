@@ -13,7 +13,6 @@ class Applic extends CI_Controller{
                     if (!empty($_POST)){
                         if(isset($_FILES['photo_d']) && $_FILES['photo_d']['error'] === UPLOAD_ERR_OK){
                             $id_user = $this->session->userdata('id_user');
-                            var_dump($id_user);
                     $name = $_POST['name'];
                     $discription = $_POST['discription'];
                     $name_category = $_POST['name_category'];
@@ -36,4 +35,12 @@ class Applic extends CI_Controller{
         $this->load->view('view_user.php',$data);
         $this->load->view('temp/footer.php');
             }
-     
+
+            public function delete_applic(){
+            if (!empty($_POST)){
+                $id_zayavki = $_POST['id_zayavki'];
+                $this->load->model('application_model');
+                $this->appication_model->delete_applic($id_zayavki);  
+                redirect('applic/lichcab');  
+            }}
+        }
