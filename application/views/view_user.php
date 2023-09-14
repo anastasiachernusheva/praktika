@@ -20,7 +20,7 @@
               <td>'.$row['name_category'].'</td>
                   <td>'.$row['status'].'</td>';
                   if( $row['status'] == "Новая"){
-                    echo'<<td> <button type="button" class="btn btn-dark"><a href ="applic/delete_applic/'.$row['id_zayavki'].'"">Удалить</button>';  
+                    echo'<<td> <button type="button" class="btn btn-dark"><a href ="applic/delete_applic?id_zayavki='.$row['id_zayavki'].'"">Удалить</button>';  
                     }                 
                     echo  '</td>   
                     </tr>';   

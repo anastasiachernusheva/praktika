@@ -7,7 +7,7 @@ class Appication_model extends CI_Model{
         return $result->result_array(); 
     }
     public function select_myapplic($id_user){
-        $sql =' select zayavki.name, discription, status,date_start, category.name_category from zayavki, category where id_user=? and zayavki.id_category=category.id_category  ';
+        $sql =' select zayavki.id_zayavki,name, discription, status,date_start, category.name_category from zayavki, category where id_user=? and zayavki.id_category=category.id_category  ';
         $result = $this->db->query($sql,array($id_user));
         return $result->result_array(); 
     }
@@ -17,8 +17,8 @@ class Appication_model extends CI_Model{
         return $this->db->insert_id(); 
     }
     public function delete_applic($id_zayavki){
-        $sql ='DELETE FROM zayavki WHERE id_zayavki = $id_zayavki';
-        $result = $this->db->query($sql,array($id_zayavki));
-        return $result->result_array(); 
+        $sql ='DELETE FROM zayavki WHERE id_zayavki = ?';
+        $this->db->query($sql,array($id_zayavki));
+     
     }
 }

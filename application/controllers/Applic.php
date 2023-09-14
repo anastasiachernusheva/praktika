@@ -7,8 +7,8 @@ class Applic extends CI_Controller{
         $this->load->model('category_model');
         $data['cat'] = $this->category_model->select_category();
         $this->load->view('form.php',$data);
-
             }
+
                 public function add_applic(){
                     if (!empty($_POST)){
                         if(isset($_FILES['photo_d']) && $_FILES['photo_d']['error'] === UPLOAD_ERR_OK){
@@ -37,10 +37,18 @@ class Applic extends CI_Controller{
             }
 
             public function delete_applic(){
-            if (!empty($_POST)){
-                $id_zayavki = $_POST['id_zayavki'];
-                $this->load->model('application_model');
+            if (!empty($_GET)){
+                $id_zayavki = $_GET['id_zayavki'];
+                $this->load->model('appication_model');
                 $this->appication_model->delete_applic($id_zayavki);  
                 redirect('applic/lichcab');  
             }}
+            
+    public function admin(){
+        $this->load->view('temp/header.php');
+        $this->load->view('temp/navadmin.php');
+        
+        $this->load->view('view_admin.php',$data);
+        $this->load->view('temp/footer.php');
+            }
         }
