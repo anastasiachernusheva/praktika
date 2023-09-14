@@ -36,5 +36,4 @@ class Applic extends CI_Controller{
         $this->load->view('view_user.php',$data);
         $this->load->view('temp/footer.php');
             }
-            ///GKHJFGLKHF'SG;KHPRTKHM;LFGKH;LFGHK;L'FG
-}
+     
