@@ -61,4 +61,25 @@ class Applic extends CI_Controller{
                 $this->appication_model->update_status($id_zayavki,$status);
                 redirect('applic/admin');
             }
+
+            public function ins_conf(){
+                if (!empty($_POST)){
+                    if(isset($_FILES['photo_p']) && $_FILES['photo_p']['error'] === UPLOAD_ERR_OK){       
+                $id_zayavki = $_POST['id_zayavki'];
+                $date_end = $_POST['date_end'];
+                $photo_p = $_FILES['photo_p']['name'];
+                $this->load->model('appication_model');
+                $this->appication_model->update_applic($id_zayavki, $photo_p, $date_end);     
+                redirect('applic/admin');
+
+            }
+        }
+    }
+        public function form_p(){
+            $data['id_zayavki'] = $this->uri->segment(3);
+            $this->load->view('temp/header.php');
+            $this->load->view('temp/navadmin.php');
+            $this->load->view('form_p.php',$data);
+            $this->load->view('temp/footer.php');
+        }
         }

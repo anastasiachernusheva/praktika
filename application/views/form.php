@@ -35,9 +35,6 @@
 <input type="file" class="form-control" id="photo_d" name = 'photo_d' accept="img/*" required>  
 </div>
         </div>
-
-
-
         <button type="submit" class="btn btn-primary">Оставить заявку</button>
         <p id="err" style="color:red"> </p>
         </form>

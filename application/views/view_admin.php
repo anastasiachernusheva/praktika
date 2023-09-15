@@ -4,11 +4,12 @@
   <div class="col-lg-12" >
   <h2>Заявки пользователей</h2>
 		<table class="table">
-			<tr>   <th> Дата </th>
+			<tr>   <th> Дата подачи</th>
       <th> ФИО пользователя </th>
             <th>Название заявки</th>
 				<th> Описание</th>
 				<th>Категория</th>
+        <th> Дата выполнения</th>
                 <th>Статус</th>
                 <th>Действие</th>   
 
@@ -20,13 +21,14 @@
               <td>'.$row['name'].'</td>
             <td>'.$row['discription'].'</td> 
               <td>'.$row['name_category'].'</td>
+              <td>'.$row['date_end'].'</td>
               <td>'.$row['status'].'</td>';
                   if( $row['status'] == "Новая"){
                     echo'<<td> <button type="button" class="btn btn-dark"><a href ="applic/status/'.$row['id_zayavki'].'"">Принять</button>';  
                       echo'<button type="button" class="btn btn-dark"><a href =""">Отклонить</button>';  
                       }    
                         if( $row['status'] == "Принято"){
-                          echo'<<td> <button type="button" class="btn btn-dark"><a href =""">Решено</button>';  
+                          echo'<<td> <button type="button" class="btn btn-dark"><a href ="applic/form_p/'.$row['id_zayavki'].'"">Решено</button>';  
                         }                 
                     echo  '</td>   
                     </tr>';   

@@ -29,5 +29,11 @@ class Appication_model extends CI_Model{
    public function update_status($id_zayavki){
     $sql = 'update zayavki set status = "Принято" where id_zayavki=(?) ';
     $this->db->query($sql,$id_zayavki);
+}    
+
+public function update_applic($id_zayavki, $photo_p, $date_end){
+    var_dump($date_end);
+    $sql =' update zayavki set photo_p = ?, date_end = ?, status ="Выполненно" where id_zayavki=?';
+    $this->db->query($sql,array( $photo_p, $date_end,$id_zayavki));
 }
 }
