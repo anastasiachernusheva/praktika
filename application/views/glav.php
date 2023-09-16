@@ -48,8 +48,8 @@
 foreach($zayavki as $row) {
 echo'  <div class="col">
     <div class="card">   
-    <img src="img/'.$row['photo_p'].'" class="card-img-top" alt="..." width="250px"   height="400px">
-    <img src="img/'.$row['photo_d'].'" class="card-img-top" alt="..." width="250px"   height="400px">
+    <img src="img/'.$row['photo_p'].'" class="card-img-top photo_p" alt="..." id="photo_p'.$row['id_zayavki'].'" width="250px"   height="400px">
+    <img src="img/'.$row['photo_d'].'" class="card-img-top photo_d" alt="..." id="photo_d'.$row['id_zayavki'].'" width="250px"   height="400px">
       <div class="card-body">
         <h5 class="card-title">'.$row['name'].'</h5>
         <p class="card-text">'.mb_substr($row['discription'],0,200).'</p>

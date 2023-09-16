@@ -16,15 +16,16 @@ class Main extends CI_Controller{
          }
          else{
             $this->load->view('temp/nav.php');
-         }
-         $this->load->model('appication_model');
-         $data['zayavki'] = $this->appication_model->select_zayavki();
+         } 
+         $id_zayavki = $this->uri->segment(3);
+         $this->load->model('appication_model');       
+         $data['zayavki'] = $this->appication_model->select_zayavki($id_zayavki);
          $this->load->model('category_model');
          $data['cat'] = $this->category_model->select_category();
         $this->load->view('glav.php',$data);        
-
         $this->load->view('temp/footer.php');
             }
+        
 
             public function avtorizaciya(){
                 $data['message'] = "";
