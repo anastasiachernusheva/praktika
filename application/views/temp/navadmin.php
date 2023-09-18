@@ -17,7 +17,7 @@
                     <a class="nav-link active" aria-current="page" href="applic/admin">Заявки</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="">Управление категориями</a>
+                    <a class="nav-link active" aria-current="page" href="category/sel_category">Управление категориями</a>
                   </li>
                   </li>
                 </ul>
